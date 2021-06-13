@@ -1,5 +1,6 @@
 package me.whiteship.java8to11;
 
+import java.util.Arrays;
 import java.util.function.Function;
 
 public class Foo {
@@ -13,5 +14,9 @@ public class Foo {
 
 //        System.out.println(plus10.apply(1));
         System.out.println(plus10.andThen(multply2).apply(2));  // 24
+
+        String[] names = {"dsg", "kmb", "keesun"};
+        Arrays.sort(names, String::compareToIgnoreCase);
+        System.out.println(Arrays.toString(names));
     }
 }
