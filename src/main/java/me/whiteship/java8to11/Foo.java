@@ -1,14 +1,14 @@
 package me.whiteship.java8to11;
 
+import java.util.function.Function;
+
 public class Foo {
 
     public static void main(String[] args) {
-//        RunSometing runSometing = () -> System.out.println("hello");
-//        runSometing.doIt();
-        RunSometing runSometing = (n) -> {
-            return n + 10;
-        };
+//        Plus10 plus10 = new Plus10();
+//        System.out.println(plus10.apply(1));
 
-        System.out.println(runSometing.doIt(1));
+        Function<Integer, Integer> plus10 = (i) -> i + 10;
+        System.out.println(plus10.apply(1));
     }
 }
